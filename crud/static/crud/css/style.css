@@ -19,13 +19,13 @@
 }
 
 .jumbotron {
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 0rem;
 
 }
 
 .container-point {
     background-color: #fff;
-    margin: 0 13rem;
+    margin: 0;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: darkolivegreen;
@@ -35,9 +35,13 @@
 @media only screen and (max-width: 1400px) {
 .container-point {
         background-color: #fff;
-        margin: 0;
+        margin: 0 ;
     }
 }
+
+
+
+
 
 .effect1 {
     -webkit-box-shadow: 0 10px 6px -6px #777;
