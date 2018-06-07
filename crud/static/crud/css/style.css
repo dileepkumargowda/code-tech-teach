@@ -1,0 +1,121 @@
+
+ * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: Helvetica, sans-serif;
+  }
+  
+  body {
+    background: #ccc;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.fakeimg {
+    height: 200px;
+    background: #f7f7f7;
+    margin: 0 auto;
+}
+
+.jumbotron {
+    padding: 0.7rem 1rem;
+
+}
+
+.container-point {
+    background-color: #fff;
+    margin: 0 13rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: darkolivegreen;
+}
+
+
+@media only screen and (max-width: 1400px) {
+.container-point {
+        background-color: #fff;
+        margin: 0;
+    }
+}
+
+.effect1 {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.nav-item {
+    font-size: 14px;
+    margin: 0 1px;
+}
+
+.tut-heads {
+    color: #fff;
+    background-color: #007bff;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 15px;
+    margin: 2px 2px;
+    padding: 8px 2px;
+}
+
+.nav-item-side {
+    color: gray;
+    background-color: #fff;
+    margin: 2px 4px;
+    padding: 0 4px;
+    font-size: 13px;
+
+}
+
+.nav-link-side {
+    color: #000;
+    background-color: #ccc;
+    display: block;
+    padding: .4rem 1rem;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem;
+  }
+
+
+.page-mover {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 1rem 0.4rem;
+
+    height: 2.5rem;
+}
+
+
+pre,
+code {
+    font-family: 'Monaco', courier, monospace;
+}
+
+
+
+pre {
+
+word-wrap: break-word;
+  text-align: left;
+    
+  font-size: 14px;
+    white-space: pre;
+    overflow: auto;
+    padding: 10px !important;
+    clear: both;
+    margin: 10px 0 !important;
+    color: #4C6D75 !important;
+    background-color: #f5fffc !important;
+    border: 1px solid #91f4de !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+}
+
+/*code related to responsoivity of main menu bar and side bar*/
+

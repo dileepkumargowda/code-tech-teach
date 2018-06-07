@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Greedy Navigation</title>
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'crud/css/style.css' %}" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> {% load static %}
+  <script type="text/javascript" src="{% static 'crud/js/greedynav.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'crud/css/greedynav.css' %}" />
+
+
+
+  <style type="text/css">
+
+  body {
+    background: #ccc;
+    
+}
+
+    .nav-link {
+      display: block;
+      padding: .5rem;
+    }
+ 
+    .mini-submenu {
+      display: none;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid rgba(0, 0, 0, 0.9);
+      border-radius: 4px;
+      padding: 9px;
+      /*position: relative;*/
+      width: 42px;
+
+    }
+
+    .mini-submenu:hover {
+      cursor: pointer;
+    }
+
+    .mini-submenu .icon-bar {
+      border-radius: 1px;
+      display: block;
+      height: 2px;
+      width: 22px;
+      margin-top: 3px;
+    }
+
+    .mini-submenu .icon-bar {
+      background-color: #000;
+    }
+
+      .forwidewindow {
+        display: none;
+      }
+
+    @media only screen and (max-width: 700px) {
+      .forwidewindow {
+        display: initial;
+      }
+      .sidebar{
+        display: none;
+      }
+      .additionClass{
+        width:100% !important;
+      }
+    }
+
+    @media only screen and (min-width: 700px) {
+      .forwidewindow {
+        display: none;
+      }
+      .sidebar{
+        display: initial !important;
+      }
+    }
+   
+  </style>
+
+
+
+
+  <script>
+    $(function () {
+
+      $('.mini-submenu').on('click', function () {
+        $('.list-group').toggle('slide');
+        //$('.mini-submenu').hide();
+      })
+    })
+  </script>
+
+</head>
+
+
+<body>
+  <div class="container-point">
+    <div class="jumbotron text-left" style="margin-bottom:0">
+      <h6>HERE COMES THE LOGO</h6>
+      <p>Here is the vision statment of site</p>
+    </div>
+
+    <nav class='greedy'>
+      <!-- <h1>GreedyNav</h1>  -->
+      <div class="mini-submenu forwidewindow">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+
+      <ul class='links' style="margin-right: 0rem;z-index:200">
+        <li class="nav-item" style="margin-right: 0rem;z-index:200">
+          <a class="nav-link active" href="#">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Html</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Css</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SpringMVC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Python</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Django</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hibernate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mysql</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">C</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">C++</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Angular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">REST</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">JSON</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Puzzals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Design Pattern</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Data Structure</a>
+        </li>
+      </ul>
+      <button>MENU</button>
+      <ul class='hidden-links hidden' style="z-index:200"></ul>
+    </nav>
+
+
+
+    <div class="container-point-1" style="margin-top:30px">
+      <div class="row" style="margin:1px 2px">
+         
+        <div class="col-sm-3 list-group sidebar " style="background-color:#eee">
+          <h6 class="tut-heads">Some Headings</h6>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Active</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Disabled</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Active</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Disabled</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Active</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Disabled</a>
+            </li>
+          </ul>
+
+          <h6 class="tut-heads">Some Headings</h6>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Active</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Disabled</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Active</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+            <li class="nav-item-side">
+              <a class="nav-link nav-link-side" href="#">Link</a>
+            </li>
+
+          </ul>
+          <hr class="d-sm-none">
+        </div>
+
+
+        <div class="col-sm-9 additionClass">
+
+          <h5>Study guidlines...</h5>
+          <div class="page-mover">
+              <div style="margin-top:8px;float:right;">
+                  Next
+              </div>
+              <div style="margin-top:8px;">
+                  Previous
+              </div>
+
+          </div>
+
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <br>
+          <pre><code>function fn() {
+    var x = 'function scope';
+                       
+    if (true) {
+        var y = 'not block scope';
+    }
+           
+    function innerFn() {
+        console.log(x, y); // function scope not block scope
+    }
+    innerFn();
+}</code> </pre>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <br>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <br>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <br>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <br>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <p>Footer</p>
+    </div>
+  </div>
+</body>
+
+</html>
