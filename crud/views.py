@@ -13,10 +13,10 @@ def create(request):
     member.save()
     return redirect('/')
 
-def edit(request, id):
-    members = Member.objects.get(id=id)
+def home(request):
+    members = Member.objects.all()
     context = {'members': members}
-    return render(request, 'crud/edit.html', context)
+    return render(request, 'crud/javabase.html', context)
 
 def update(request, id):
     member = Member.objects.get(id=id)

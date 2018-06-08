@@ -18,11 +18,16 @@
     margin: 0 auto;
 }
 
-.jumbotron {
+.jumbotron-top {
     padding: 0.7rem 0rem;
 
 }
-
+.jumbotron-footer {
+    padding: 0.8rem 0rem !important;
+    position: relative;;
+    width:100%;
+    bottom:0;
+}
 .container-point {
     background-color: #fff;
     margin: 0;
@@ -121,5 +126,17 @@ word-wrap: break-word;
     border-radius: 3px !important;
 }
 
-/*code related to responsoivity of main menu bar and side bar*/
+/*code related to JAVABASE file */
+
+@media (min-width: 576px){
+.jumbotron-sub-head {
+     padding: 0rem .8rem !important; 
+}
+}
+
+.jumbotron-sub-head {
+    padding: 0 0.8rem 0.4rem 0 !important; 
+    background-color: #fff !important;
+    
+}
 

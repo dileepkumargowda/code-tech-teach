@@ -1,32 +1,235 @@
 {% extends 'crud/base.html' %}
 {% block body %}
-<form class="form-inline"  action="create" method="POST">
-    {% csrf_token %}
-    <div class="form-group">
-        <label for="firstname">Firstname</label>
-        <input type="text" name="firstname" class="form-control" style="width:30%;" required="required"/>
-        <label for="lastname">Lastname</label>
-        <input type="text" name="lastname" class="form-control" style="width:30%;" required="required"/>
-        <button type="submit" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span> ADD</button>
-    </div>
-</form>
-<br />
-<table class="table table-bordered">
-    <thead class="alert-warning">
-        <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for member in members %}
-        <tr>
-            <td>{{ member.firstname }}</td>
-            <td>{{ member.lastname }}</td>
-            <td><center><a class="btn btn-sm btn-warning" href="edit/{{ member.id }}"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a class="btn btn-sm btn-danger" href="delete/{{ member.id }}"><span class="glyphicon glyphicon-trash"></span> Delete</a></center></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="container-point-1" style="margin-top:30px">
+        <div class="row" style="margin:1px 2px">
+  
+          <div class="col-sm-2 list-group sidebar " style="background-color:#eee">
+            <h6 class="tut-heads">Some Headings</h6>
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Active</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Disabled</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Active</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Disabled</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Active</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Disabled</a>
+              </li>
+            </ul>
+  
+            <h6 class="tut-heads">Some Headings</h6>
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Active</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Disabled</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Active</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+              <li class="nav-item-side">
+                <a class="nav-link nav-link-side" href="#">Link</a>
+              </li>
+  
+            </ul>
+            <hr class="d-sm-none">
+          </div>
+  
+  
+          <div class="col-sm-7 additionClass">
+  
+            <h5>Study guidlines...</h5>
+            <div class="page-mover">
+              <div style="margin-top:8px;float:right;">
+                Next
+              </div>
+              <div style="margin-top:8px;">
+                Previous
+              </div>
+  
+            </div>
+  
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <pre><code>function fn() {
+      var x = 'function scope';
+                         
+      if (true) {
+          var y = 'not block scope';
+      }
+             
+      function innerFn() {
+          console.log(x, y); // function scope not block scope
+      }
+      innerFn();
+  }</code> </pre>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+  
+  
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <pre><code>function fn() {
+      var x = 'function scope';
+                         
+      if (true) {
+          var y = 'not block scope';
+      }
+             
+      function innerFn() {
+          console.log(x, y); // function scope not block scope
+      }
+      innerFn();
+  }</code> </pre>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+  
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <pre><code>function fn() {
+      var x = 'function scope';
+                         
+      if (true) {
+          var y = 'not block scope';
+      }
+             
+      function innerFn() {
+          console.log(x, y); // function scope not block scope
+      }
+      innerFn();
+  }</code> </pre>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <br>
+          </div>
+  
+          <div class="col-sm-3">
+              <h5>Study guidlines...</h5>
+              <p>Some text..</p>
+              <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
+              <br>
+              <p>Some text..</p>
+              <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
+  
+          </div>
+        </div>
+      </div>
 {% endblock %}
