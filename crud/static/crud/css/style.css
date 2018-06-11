@@ -135,8 +135,13 @@ word-wrap: break-word;
 }
 
 .jumbotron-sub-head {
-    padding: 0 0.8rem 0.4rem 0 !important; 
-    background-color: #fff !important;
+    padding: 0 !important; 
+   /* background-color: #eee !important;*/
     
 }
 
+.tex-cent-both{
+    text-align: center;
+     vertical-align: middle;
+      line-height: 90px;
+}
