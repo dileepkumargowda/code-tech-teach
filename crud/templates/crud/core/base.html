@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Greedy Navigation</title>
+
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> 
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'crud/css/side-toggler.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'crud/css/style.css' %}" />
+
+
+
+  <style type="text/css">
+ 
+    @media (min-width: 576px) {
+      .jumbotron-top {
+        padding: .8rem;
+      }
+    }
+    .navbar-collapse {
+    background-color: green;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container-point">
+    <div class="jumbotron jumbotron-top text-left" style="margin-bottom:0">
+      <h6>HERE COMES THE LOGO</h6>
+      <p>Here is the vision statment of site</p>
+    </div>
+
+    <!-- <nav class='navbar navbar-expand-sm greedy sticky-top'>
+       <h1>GreedyNav</h1>  rgb(66, 133, 244) -->
+    <nav class="navbar navbar-expand-sm sticky-top" style="background-color:green ;height:42px;color:#fff">
+
+      <a class="navbar-brand" href="/" style="color: rgba(255,255,255,.7);">Navbar</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="z-index: 200;background-color: gray">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav links">
+          <li class="nav-item">
+            <a class="nav-link active" href="javahome">JAVA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CSS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JAVASCRIPT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SPRINGMVC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PYTHON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DJANOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">HIBERNATE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MYSQL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">C</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">C++</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ANGULAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">REST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JSON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PUZZALS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DESIGNPATTERNS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DATASTRUCTURES</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block body %} {% endblock %}
+  </div>
+
+
+  <div class="jumbotron jumbotron-footer text-center" style="margin-bottom:0;">
+    <p>Footer</p>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".icon").click(function () {
+        $('.box').toggleClass("open-more");
+        $(this).toggleClass("button");
+      });
+    });
+  </script>
+</body>
+
+</html>

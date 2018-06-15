@@ -1,13 +1,12 @@
-
- * {
+* {
     box-sizing: border-box;
-  }
+}
 
-  html {
+html {
     font-family: Helvetica, sans-serif;
-  }
-  
-  body {
+}
+
+body {
     background: #ccc;
     font-family: "Open Sans", Arial, sans-serif;
 }
@@ -20,33 +19,30 @@
 
 .jumbotron-top {
     padding: 0.7rem 0rem;
-
 }
+
 .jumbotron-footer {
     padding: 0.8rem 0rem !important;
-    position: relative;;
-    width:100%;
-    bottom:0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
+
 .container-point {
     background-color: #fff;
     margin: 0;
 }
+
 .navbar-dark .navbar-nav .nav-link {
     color: darkolivegreen;
 }
 
-
 @media only screen and (max-width: 1400px) {
-.container-point {
+    .container-point {
         background-color: #fff;
-        margin: 0 ;
+        margin: 0;
     }
 }
-
-
-
-
 
 .effect1 {
     -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -75,7 +71,6 @@
     margin: 2px 4px;
     padding: 0 4px;
     font-size: 13px;
-
 }
 
 .nav-link-side {
@@ -88,31 +83,25 @@
 .nav-link {
     display: block;
     padding: .5rem;
-  }
-
+    color: rgba(255, 255, 255, .7);
+}
 
 .page-mover {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     margin: 1rem 0.4rem;
-
     height: 2.5rem;
 }
-
 
 pre,
 code {
     font-family: 'Monaco', courier, monospace;
 }
 
-
-
 pre {
-
-word-wrap: break-word;
-  text-align: left;
-    
-  font-size: 14px;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 14px;
     white-space: pre;
     overflow: auto;
     padding: 10px !important;
@@ -128,20 +117,86 @@ word-wrap: break-word;
 
 /*code related to JAVABASE file */
 
-@media (min-width: 576px){
-.jumbotron-sub-head {
-     padding: 0rem .8rem !important; 
-}
-}
-
-.jumbotron-sub-head {
-    padding: 0 !important; 
-   /* background-color: #eee !important;*/
-    
+@media (min-width: 576px) {
+    .jumbotron-sub-head {
+        padding: 0rem .8rem !important;
+    }
 }
 
-.tex-cent-both{
+.jumbotron-sub-head {
+    padding: 0 !important;
+    margin-bottom: .4rem;
+    /* background-color: #eee !important;*/
+}
+
+.tex-cent-both {
     text-align: center;
-     vertical-align: middle;
-      line-height: 90px;
+    vertical-align: middle;
+    line-height: 90px;
+}
+
+.part-head {
+    margin-top: 0rem;
+    border: 1px solid green;
+    background-color: #e9ecef;
+}
+
+.part-guid {
+    /*  margin: 1rem auto; */
+    margin: 2rem auto auto;
+    max-width: 55%;
+    border: 1px solid blue;
+    padding: 9px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .part-guid {
+        margin: 0 !important;
+        max-width: 100% !important;
+        padding: 0;
+    }
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 1.5rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    border-bottom: 1rem solid lightblue;
+    margin: auto;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #ccc;
+    margin: .75rem 0 .5rem 0;
+}
+
+.center-subs {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.main-en-contents__part {
+    min-width: 100px;
+    display: inline-block;
+    margin: 5px 45% 5px 45%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: green;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 33px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-head-card {
+    width: 85%;
+    margin: 1rem auto;
 }
